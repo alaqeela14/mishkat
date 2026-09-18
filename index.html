@@ -1,0 +1,1866 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>منصة مشكاة | للنور والوعي</title>
+    <meta name="description" content="منصة مشكاة للنور والوعي - مقالات ورؤى في الوعي المجتمعي">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary-navy: #1a2b4a;
+            --primary-navy-dark: #0f1e3d;
+            --secondary-blue: #2c4a7c;
+            --light-blue: #dbe4f0;
+            --very-light-blue: #f5f8fc;
+            --gold-accent: #c9a961;
+            --gold-light: #f5edd6;
+            --text-dark: #1a1a1a;
+            --text-muted: #6B7280;
+            --white: #FFFFFF;
+            --border-color: #e0e6ed;
+            --breaking-red: #b91c1c;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Tajawal', sans-serif;
+            background: var(--very-light-blue);
+            color: var(--text-dark);
+            line-height: 1.7;
+        }
+        a { text-decoration: none; }
+
+        .hidden-section { display: none !important; }
+
+        .extras-hidden .hero-compact,
+        .extras-hidden .breaking-bar {
+            display: none !important;
+        }
+
+        .top-bar {
+            background: var(--primary-navy-dark);
+            color: #b8c4d6;
+            padding: 6px 0;
+            border-bottom: 2px solid var(--gold-accent);
+            font-size: 12px;
+        }
+        .top-bar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        .top-bar .contact-info { display: flex; align-items: center; gap: 6px; }
+        .top-bar .contact-info i { color: var(--gold-accent); }
+        .top-bar .right { display: flex; gap: 5px; align-items: center; }
+        .top-bar .lang-btn {
+            background: transparent;
+            border: 1px solid #3a4a6a;
+            color: #b8c4d6;
+            padding: 2px 10px;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 11px;
+            font-weight: 500;
+            transition: 0.3s;
+            font-family: 'Tajawal', sans-serif;
+        }
+        .top-bar .lang-btn:hover,
+        .top-bar .lang-btn.active {
+            border-color: var(--gold-accent);
+            color: var(--gold-accent);
+        }
+        .top-bar .social-icons {
+            display: flex;
+            gap: 10px;
+            margin-left: 15px;
+        }
+        .top-bar .social-icons a { color: #b8c4d6; transition: 0.3s; }
+        .top-bar .social-icons a:hover { color: var(--gold-accent); }
+
+        .main-header {
+            background: var(--white);
+            padding: 12px 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+        .main-header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+        }
+        .main-header .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            cursor: pointer;
+        }
+        .main-header .brand .logo-mark {
+            width: 55px;
+            height: 55px;
+            background: linear-gradient(135deg, var(--primary-navy), var(--secondary-blue));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gold-accent);
+            font-size: 24px;
+            border: 2px solid var(--gold-accent);
+            flex-shrink: 0;
+        }
+        .main-header .brand-text { display: flex; flex-direction: column; line-height: 1.15; }
+        .main-header .brand-text .main {
+            font-size: 1.6rem;
+            color: var(--primary-navy);
+            font-weight: 800;
+            letter-spacing: 1px;
+        }
+        .main-header .brand-text .sub {
+            font-size: 12px;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+        .main-header .header-clock {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 3px;
+            font-size: 11.5px;
+        }
+        .main-header .header-clock .time-row {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            color: var(--primary-navy);
+            font-weight: 700;
+            font-size: 14px;
+        }
+        .main-header .header-clock .time-row i { color: var(--gold-accent); }
+        .main-header .header-clock .date-row {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--text-muted);
+            font-size: 11px;
+        }
+        .main-header .header-clock .date-row i { color: var(--secondary-blue); }
+        .mobile-menu-btn {
+            display: none;
+            background: var(--primary-navy);
+            color: var(--gold-accent);
+            border: none;
+            width: 42px;
+            height: 42px;
+            border-radius: 6px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        .main-nav {
+            background: var(--primary-navy);
+            border-bottom: 3px solid var(--gold-accent);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+        }
+        .main-nav .container {
+            display: flex;
+            align-items: center;
+            padding: 0;
+        }
+        .main-nav .nav-list {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            flex-wrap: wrap;
+        }
+        .main-nav .nav-list li a {
+            display: block;
+            color: #d0d8e6;
+            padding: 13px 16px;
+            font-size: 13.5px;
+            font-weight: 500;
+            border-bottom: 3px solid transparent;
+            margin-bottom: -3px;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+        .main-nav .nav-list li a:hover,
+        .main-nav .nav-list li a.active {
+            color: var(--gold-accent);
+            background: rgba(201, 169, 97, 0.08);
+            border-bottom-color: var(--gold-accent);
+        }
+        .main-nav .nav-list .dropdown-menu {
+            border: 1px solid var(--border-color);
+            border-radius: 3px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+            padding: 0;
+        }
+        .main-nav .nav-list .dropdown-item {
+            font-size: 13px;
+            padding: 9px 20px;
+            color: var(--text-dark);
+            cursor: pointer;
+        }
+        .main-nav .nav-list .dropdown-item:hover {
+            background: var(--very-light-blue);
+            color: var(--primary-navy);
+        }
+        .main-nav .search-mini {
+            display: flex;
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 3px;
+            margin-right: auto;
+            overflow: hidden;
+        }
+        .main-nav .search-mini input {
+            background: transparent;
+            border: none;
+            padding: 8px 14px;
+            color: white;
+            font-family: 'Tajawal', sans-serif;
+            font-size: 13px;
+            outline: none;
+            width: 160px;
+        }
+        .main-nav .search-mini input::placeholder { color: #8896b0; }
+        .main-nav .search-mini button {
+            background: var(--gold-accent);
+            border: none;
+            padding: 8px 14px;
+            color: var(--primary-navy);
+            cursor: pointer;
+        }
+
+        .mobile-clock-bar, .mobile-search-bar { display: none; }
+
+        .breaking-bar {
+            background: white;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            padding: 10px 15px;
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .breaking-bar .container {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            overflow: hidden;
+            width: 100%;
+            padding: 0;
+        }
+        .breaking-label {
+            background: var(--breaking-red);
+            color: white;
+            padding: 5px 14px;
+            border-radius: 3px;
+            font-size: 12px;
+            font-weight: 700;
+            white-space: nowrap;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            flex-shrink: 0;
+        }
+        .breaking-label i { animation: pulse 1.5s infinite; }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+        .breaking-ticker { flex: 1; overflow: hidden; height: 24px; }
+        .breaking-ticker marquee { font-size: 13.5px; }
+        .breaking-ticker marquee a {
+            color: var(--primary-navy);
+            font-weight: 600;
+            margin: 0 8px;
+        }
+        .breaking-ticker marquee a:hover { color: var(--gold-accent); }
+        .breaking-ticker marquee span { color: var(--gold-accent); }
+
+        .main-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px 15px;
+        }
+
+        .page-view { display: none; }
+        .page-view.active { display: block; }
+
+        .page-title-bar {
+            background: linear-gradient(135deg, var(--primary-navy), var(--secondary-blue));
+            color: white;
+            padding: 30px 25px;
+            border-radius: 6px;
+            margin-bottom: 25px;
+            border-right: 5px solid var(--gold-accent);
+            position: relative;
+            overflow: hidden;
+        }
+        .page-title-bar::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -20%;
+            width: 140%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(201, 169, 97, 0.15), transparent 60%);
+        }
+        .page-title-bar h1 {
+            font-size: 1.8rem;
+            font-weight: 800;
+            margin-bottom: 6px;
+            position: relative;
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .page-title-bar h1 i { color: var(--gold-accent); }
+        .page-title-bar p {
+            font-size: 14px;
+            color: rgba(255,255,255,0.85);
+            margin: 0;
+            position: relative;
+            z-index: 2;
+        }
+
+        .content-card {
+            background: white;
+            border-radius: 6px;
+            padding: 25px 30px;
+            box-shadow: 0 2px 10px rgba(26, 43, 74, 0.06);
+            border: 1px solid var(--border-color);
+            margin-bottom: 20px;
+            border-top: 4px solid var(--primary-navy);
+        }
+        .content-card h2 {
+            color: var(--primary-navy);
+            font-size: 1.3rem;
+            font-weight: 800;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--gold-light);
+        }
+        .content-card h2 i { color: var(--gold-accent); }
+        .content-card h3 {
+            color: var(--secondary-blue);
+            font-size: 1.05rem;
+            font-weight: 700;
+            margin: 18px 0 10px;
+        }
+        .content-card p {
+            font-size: 14.5px;
+            color: var(--text-dark);
+            line-height: 1.9;
+            margin-bottom: 12px;
+        }
+        .content-card ul {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 15px;
+        }
+        .content-card ul li {
+            padding: 8px 28px 8px 0;
+            position: relative;
+            font-size: 14px;
+            border-bottom: 1px dashed var(--border-color);
+        }
+        .content-card ul li:last-child { border-bottom: none; }
+        .content-card ul li::before {
+            content: '\f058';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            color: var(--secondary-blue);
+            position: absolute;
+            right: 0;
+            top: 8px;
+            font-size: 14px;
+        }
+
+        .sections-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+        .section-tile {
+            background: var(--very-light-blue);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            padding: 18px 20px;
+            transition: 0.3s;
+            cursor: pointer;
+            border-right: 4px solid var(--gold-accent);
+        }
+        .section-tile:hover {
+            background: white;
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(26, 43, 74, 0.1);
+            border-right-color: var(--primary-navy);
+        }
+        .section-tile .icon {
+            width: 42px;
+            height: 42px;
+            background: linear-gradient(135deg, var(--primary-navy), var(--secondary-blue));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gold-accent);
+            font-size: 18px;
+            margin-bottom: 12px;
+        }
+        .section-tile h4 {
+            color: var(--primary-navy);
+            font-size: 1rem;
+            font-weight: 800;
+            margin-bottom: 5px;
+        }
+        .section-tile p {
+            color: var(--text-muted);
+            font-size: 12.5px;
+            margin: 0;
+        }
+
+        .steps-list {
+            list-style: none;
+            padding: 0;
+            counter-reset: step-counter;
+        }
+        .steps-list li {
+            padding: 12px 55px 12px 0;
+            position: relative;
+            font-size: 14px;
+            border-bottom: 1px dashed var(--border-color);
+            counter-increment: step-counter;
+        }
+        .steps-list li:last-child { border-bottom: none; }
+        .steps-list li::before {
+            content: counter(step-counter);
+            position: absolute;
+            right: 0;
+            top: 12px;
+            width: 34px;
+            height: 34px;
+            background: linear-gradient(135deg, var(--primary-navy), var(--secondary-blue));
+            color: var(--gold-accent);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 14px;
+        }
+
+        .invite-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+        .invite-tile {
+            background: linear-gradient(135deg, var(--primary-navy), var(--secondary-blue));
+            color: white;
+            padding: 22px;
+            border-radius: 6px;
+            text-align: center;
+            transition: 0.3s;
+            border: 1px solid var(--gold-accent);
+        }
+        .invite-tile:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(26, 43, 74, 0.2); }
+        .invite-tile i {
+            font-size: 32px;
+            color: var(--gold-accent);
+            margin-bottom: 12px;
+            display: block;
+        }
+        .invite-tile h4 { font-size: 1rem; font-weight: 800; margin-bottom: 5px; }
+        .invite-tile p { font-size: 12.5px; color: rgba(255,255,255,0.85); margin: 0; }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+        .contact-tile {
+            background: white;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            padding: 22px;
+            text-align: center;
+            border-top: 4px solid var(--gold-accent);
+            transition: 0.3s;
+        }
+        .contact-tile:hover { transform: translateY(-4px); box-shadow: 0 8px 20px rgba(26,43,74,0.1); }
+        .contact-tile i {
+            font-size: 30px;
+            color: var(--primary-navy);
+            margin-bottom: 12px;
+            display: block;
+        }
+        .contact-tile h4 { font-size: 1rem; color: var(--primary-navy); font-weight: 800; margin-bottom: 8px; }
+        .contact-tile p { font-size: 13.5px; color: var(--text-muted); margin: 0; direction: ltr; }
+
+        .hero-compact {
+            background: linear-gradient(135deg, var(--primary-navy), var(--secondary-blue));
+            color: white;
+            padding: 25px 30px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            border-right: 5px solid var(--gold-accent);
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero-compact::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -20%;
+            width: 140%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(201, 169, 97, 0.15), transparent 60%);
+        }
+        .hero-compact .hero-icon {
+            font-size: 45px;
+            color: var(--gold-accent);
+            flex-shrink: 0;
+            position: relative;
+            z-index: 2;
+        }
+        .hero-compact .hero-text { position: relative; z-index: 2; }
+        .hero-compact h1 { font-size: 1.6rem; font-weight: 800; margin-bottom: 6px; }
+        .hero-compact h1 .gold-text { color: var(--gold-accent); }
+        .hero-compact p { font-size: 13.5px; color: rgba(255,255,255,0.85); margin: 0; }
+
+        .news-grid {
+            display: grid;
+            grid-template-columns: 1fr 320px;
+            gap: 25px;
+        }
+        .content-area { min-width: 0; }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border-bottom: 3px solid var(--primary-navy);
+            padding-bottom: 8px;
+            margin: 0 0 18px;
+        }
+        .section-header h2 {
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: var(--primary-navy);
+            margin: 0;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .section-header h2::before {
+            content: '';
+            width: 5px;
+            height: 22px;
+            background: var(--gold-accent);
+            border-radius: 2px;
+        }
+        .section-header .more-link {
+            margin-right: auto;
+            color: var(--secondary-blue);
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .category-tabs {
+            display: flex;
+            gap: 6px;
+            margin-bottom: 18px;
+            overflow-x: auto;
+            padding-bottom: 5px;
+        }
+        .category-tabs .cat-btn {
+            background: white;
+            border: 1px solid var(--border-color);
+            color: var(--primary-navy);
+            padding: 6px 16px;
+            border-radius: 3px;
+            font-size: 12px;
+            font-weight: 600;
+            cursor: pointer;
+            white-space: nowrap;
+            transition: 0.3s;
+            font-family: 'Tajawal', sans-serif;
+        }
+        .category-tabs .cat-btn.active {
+            background: var(--primary-navy);
+            color: white;
+            border-color: var(--primary-navy);
+        }
+
+        .articles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 18px;
+        }
+        .article-card {
+            background: white;
+            border-radius: 6px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(26, 43, 74, 0.06);
+            transition: 0.3s;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid var(--border-color);
+        }
+        .article-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 25px rgba(26, 43, 74, 0.15);
+            border-color: var(--gold-accent);
+        }
+        .article-card .card-top { height: 4px; background: var(--primary-navy); }
+        .article-card:hover .card-top { background: var(--gold-accent); }
+        .article-card .card-body { padding: 16px; display: flex; flex-direction: column; flex-grow: 1; }
+        .article-card .category-badge {
+            display: inline-block;
+            background: var(--very-light-blue);
+            color: var(--primary-navy);
+            padding: 3px 10px;
+            border-radius: 3px;
+            font-size: 10.5px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            border-right: 3px solid var(--gold-accent);
+            align-self: flex-start;
+        }
+        .article-card h3 {
+            color: var(--text-dark);
+            font-weight: 700;
+            font-size: 1rem;
+            margin-bottom: 8px;
+            line-height: 1.5;
+        }
+        .article-card:hover h3 { color: var(--primary-navy); }
+        .article-card .excerpt {
+            color: var(--text-muted);
+            font-size: 13px;
+            flex-grow: 1;
+            margin-bottom: 12px;
+        }
+        .article-card .meta {
+            border-top: 1px solid var(--border-color);
+            padding-top: 8px;
+            display: flex;
+            justify-content: space-between;
+            font-size: 11px;
+            color: var(--text-muted);
+        }
+        .article-card .meta i { color: var(--secondary-blue); }
+
+        .featured-card {
+            grid-column: 1 / -1;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            background: white;
+            border-radius: 6px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(26, 43, 74, 0.08);
+            border: 1px solid var(--border-color);
+        }
+        .featured-card .featured-image {
+            background: linear-gradient(135deg, var(--primary-navy), var(--secondary-blue));
+            min-height: 250px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gold-accent);
+            font-size: 60px;
+            position: relative;
+        }
+        .featured-card .featured-image::after {
+            content: 'مقال مميز';
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: var(--gold-accent);
+            color: var(--primary-navy);
+            padding: 4px 12px;
+            font-size: 11px;
+            font-weight: 800;
+            border-radius: 3px;
+        }
+        .featured-card .featured-body { padding: 30px; display: flex; flex-direction: column; justify-content: center; }
+        .featured-card .category-badge {
+            background: var(--gold-light);
+            color: var(--primary-navy);
+            padding: 4px 12px;
+            border-radius: 3px;
+            font-size: 11px;
+            font-weight: 700;
+            align-self: flex-start;
+            margin-bottom: 12px;
+        }
+        .featured-card h2 {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary-navy);
+            margin-bottom: 12px;
+            line-height: 1.4;
+        }
+        .featured-card .excerpt { color: var(--text-muted); font-size: 14px; margin-bottom: 15px; line-height: 1.8; }
+        .featured-card .meta {
+            display: flex;
+            gap: 15px;
+            font-size: 12px;
+            color: var(--text-muted);
+            border-top: 1px solid var(--border-color);
+            padding-top: 12px;
+        }
+        .featured-card .meta i { color: var(--secondary-blue); }
+
+        .sidebar { display: flex; flex-direction: column; gap: 20px; }
+        .sidebar-box {
+            background: white;
+            border-radius: 6px;
+            border: 1px solid var(--border-color);
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(26, 43, 74, 0.04);
+        }
+        .sidebar-box .box-header {
+            background: var(--primary-navy);
+            color: white;
+            padding: 10px 16px;
+            font-size: 13.5px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            border-bottom: 2px solid var(--gold-accent);
+        }
+        .sidebar-box .box-header i { color: var(--gold-accent); }
+        .sidebar-box .box-body { padding: 12px 16px; }
+
+        .most-read-item {
+            display: flex;
+            gap: 10px;
+            padding: 10px 0;
+            border-bottom: 1px dashed var(--border-color);
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .most-read-item:last-child { border-bottom: none; }
+        .most-read-item:hover { padding-right: 5px; }
+        .most-read-item .number {
+            width: 26px; height: 26px;
+            background: var(--gold-light);
+            color: var(--primary-navy);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: 800;
+            flex-shrink: 0;
+        }
+        .most-read-item .text { flex: 1; }
+        .most-read-item .text p { margin: 0; font-size: 13px; font-weight: 600; color: var(--text-dark); line-height: 1.4; }
+        .most-read-item .text small { color: var(--text-muted); font-size: 11px; }
+
+        .sidebar-cat-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 9px 0;
+            border-bottom: 1px dashed var(--border-color);
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .sidebar-cat-item:last-child { border-bottom: none; }
+        .sidebar-cat-item:hover { padding-right: 5px; }
+        .sidebar-cat-item span:first-child { font-size: 13px; font-weight: 600; color: var(--text-dark); }
+        .sidebar-cat-item .count {
+            background: var(--very-light-blue);
+            color: var(--primary-navy);
+            padding: 2px 8px;
+            border-radius: 10px;
+            font-size: 11px;
+            font-weight: 700;
+        }
+
+        .follow-icons { display: flex; flex-wrap: wrap; gap: 8px; }
+        .follow-icons a {
+            flex: 1;
+            min-width: 45px;
+            height: 45px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            border-radius: 4px;
+            font-size: 18px;
+            transition: 0.3s;
+        }
+        .follow-icons a:hover { transform: translateY(-3px); }
+        .follow-icons .fb { background: #1877f2; }
+        .follow-icons .tw { background: #1da1f2; }
+        .follow-icons .yt { background: #ff0000; }
+        .follow-icons .tg { background: #0088cc; }
+        .follow-icons .wa { background: #25d366; }
+        .follow-icons .ig { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
+
+        .submit-box {
+            background: white;
+            border-radius: 6px;
+            padding: 25px;
+            box-shadow: 0 2px 10px rgba(26, 43, 74, 0.06);
+            border: 1px solid var(--border-color);
+            border-top: 4px solid var(--gold-accent);
+            margin-top: 30px;
+        }
+        .submit-box label {
+            font-weight: 700;
+            color: var(--primary-navy);
+            margin-bottom: 6px;
+            display: block;
+            font-size: 13px;
+        }
+        .submit-box input,
+        .submit-box select,
+        .submit-box textarea {
+            width: 100%;
+            padding: 10px 14px;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            font-family: 'Tajawal', sans-serif;
+            font-size: 13.5px;
+            outline: none;
+            transition: 0.3s;
+            margin-bottom: 12px;
+        }
+        .submit-box input:focus,
+        .submit-box select:focus,
+        .submit-box textarea:focus {
+            border-color: var(--secondary-blue);
+            box-shadow: 0 0 0 3px rgba(44, 74, 124, 0.08);
+        }
+        .btn-submit {
+            background: var(--primary-navy);
+            color: white;
+            border: none;
+            padding: 11px 30px;
+            border-radius: 4px;
+            font-weight: 700;
+            font-family: 'Tajawal', sans-serif;
+            cursor: pointer;
+            transition: 0.3s;
+            font-size: 14px;
+        }
+        .btn-submit:hover { background: var(--gold-accent); color: var(--primary-navy); }
+
+        footer {
+            background: var(--primary-navy);
+            color: #b8c4d6;
+            padding: 30px 0 0;
+            border-top: 4px solid var(--gold-accent);
+            margin-top: 40px;
+        }
+        footer .footer-brand {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+        footer .footer-brand .logo-mark {
+            width: 48px; height: 48px;
+            border: 2px solid var(--gold-accent);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gold-accent);
+            font-size: 22px;
+        }
+        footer .footer-brand span { color: white; font-size: 1.5rem; font-weight: 800; }
+
+        .footer-contact-row {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px 35px;
+            padding: 15px 0;
+            border-top: 1px solid rgba(255,255,255,0.08);
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+        }
+        .footer-contact-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #b8c4d6;
+            font-size: 13.5px;
+            transition: 0.3s;
+            text-decoration: none;
+            direction: ltr;
+        }
+        .footer-contact-item i {
+            color: var(--gold-accent);
+            font-size: 15px;
+        }
+        .footer-contact-item:hover { color: var(--gold-accent); }
+
+        .footer-socials {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            padding: 18px 0 20px;
+        }
+        .footer-socials a {
+            width: 42px;
+            height: 42px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            color: white;
+            font-size: 17px;
+            transition: 0.3s;
+            text-decoration: none;
+        }
+        .footer-socials a:hover { transform: translateY(-4px); }
+        .footer-socials .fb { background: #1877f2; }
+        .footer-socials .tw { background: #1da1f2; }
+        .footer-socials .yt { background: #ff0000; }
+        .footer-socials .tg { background: #0088cc; }
+        .footer-socials .wa { background: #25d366; }
+        .footer-socials .ig { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
+        .footer-socials .admin-link {
+            background: rgba(255,255,255,0.08);
+            color: #8896b0;
+            font-size: 15px;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        .footer-socials .admin-link:hover { color: var(--gold-accent); border-color: var(--gold-accent); }
+
+        footer .footer-bottom {
+            background: var(--primary-navy-dark);
+            padding: 13px 0;
+            text-align: center;
+        }
+        footer .footer-bottom p { margin: 0; font-size: 12px; color: #8896b0; }
+
+        @media (max-width: 1024px) {
+            .news-grid { grid-template-columns: 1fr 280px; gap: 18px; }
+        }
+        @media (max-width: 900px) {
+            .news-grid { grid-template-columns: 1fr; }
+            .sidebar { flex-direction: row; flex-wrap: wrap; }
+            .sidebar-box { flex: 1; min-width: 250px; }
+            .featured-card { grid-template-columns: 1fr; }
+            .featured-card .featured-image { min-height: 180px; font-size: 45px; }
+            .contact-grid { grid-template-columns: 1fr; }
+        }
+        @media (max-width: 768px) {
+            .main-nav { display: none; }
+            .main-nav.mobile-open {
+                display: block;
+                position: fixed;
+                top: 0;
+                right: 0;
+                width: 300px;
+                height: 100vh;
+                z-index: 2000;
+                overflow-y: auto;
+                box-shadow: -5px 0 20px rgba(0,0,0,0.3);
+            }
+            .main-nav.mobile-open .nav-list {
+                flex-direction: column;
+                padding-top: 60px;
+            }
+            .main-nav.mobile-open .nav-list li { width: 100%; }
+            .main-nav.mobile-open .nav-list li a {
+                padding: 14px 20px;
+                border-bottom: 1px solid rgba(255,255,255,0.08);
+                border-right: 3px solid transparent;
+                margin-bottom: 0;
+            }
+            .main-nav.mobile-open .nav-list li a.active,
+            .main-nav.mobile-open .nav-list li a:hover {
+                border-bottom-color: transparent;
+                border-right-color: var(--gold-accent);
+            }
+            .main-nav.mobile-open .search-mini { display: none; }
+            .mobile-menu-btn { display: flex; align-items: center; justify-content: center; }
+            .mobile-overlay {
+                display: none;
+                position: fixed;
+                inset: 0;
+                background: rgba(0,0,0,0.5);
+                z-index: 1500;
+            }
+            .mobile-overlay.show { display: block; }
+            .mobile-close-btn {
+                position: absolute;
+                top: 15px;
+                left: 15px;
+                background: transparent;
+                color: var(--gold-accent);
+                border: none;
+                font-size: 24px;
+                cursor: pointer;
+            }
+            .main-header .brand-text .main { font-size: 1.3rem; }
+            .main-header .brand .logo-mark { width: 45px; height: 45px; font-size: 20px; }
+            .main-header .header-clock { display: none; }
+            .main-header .container { flex-direction: row; justify-content: space-between; padding: 0 15px; }
+
+            .mobile-clock-bar {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+                padding: 8px 15px;
+                background: var(--very-light-blue);
+                border-bottom: 1px solid var(--border-color);
+                font-size: 11px;
+                color: var(--text-dark);
+                flex-wrap: wrap;
+            }
+            .mobile-clock-bar i { color: var(--gold-accent); margin-left: 3px; }
+            .mobile-clock-bar .sep { color: var(--border-color); font-size: 10px; }
+            .mobile-clock-bar strong { color: var(--primary-navy); font-weight: 700; }
+
+            .mobile-search-bar {
+                display: flex;
+                padding: 8px 15px;
+                background: white;
+                border-bottom: 1px solid var(--border-color);
+            }
+            .mobile-search-bar input {
+                flex: 1;
+                padding: 8px 14px;
+                border: 1px solid var(--border-color);
+                border-left: none;
+                border-radius: 0 4px 4px 0;
+                font-family: 'Tajawal', sans-serif;
+                font-size: 13px;
+                outline: none;
+                background: var(--very-light-blue);
+            }
+            .mobile-search-bar button {
+                padding: 8px 16px;
+                background: var(--primary-navy);
+                color: white;
+                border: 1px solid var(--primary-navy);
+                border-radius: 4px 0 0 4px;
+                cursor: pointer;
+                font-size: 13px;
+                font-family: 'Tajawal', sans-serif;
+            }
+
+            .breaking-bar { padding: 8px 12px; margin-bottom: 15px; }
+            .breaking-label { font-size: 11px; padding: 4px 10px; }
+            .breaking-ticker marquee { font-size: 12.5px; }
+
+            .hero-compact { padding: 18px 20px; flex-direction: column; text-align: center; gap: 10px; margin-bottom: 15px; }
+            .hero-compact .hero-icon { font-size: 35px; }
+            .hero-compact h1 { font-size: 1.3rem; }
+            .hero-compact p { font-size: 12.5px; }
+
+            .articles-grid { grid-template-columns: 1fr; gap: 14px; }
+            .featured-card .featured-body { padding: 20px; }
+            .featured-card h2 { font-size: 1.2rem; }
+            .section-header h2 { font-size: 1.1rem; }
+            .section-header h2::before { height: 18px; }
+            .sidebar { flex-direction: column; }
+            .main-container { padding: 15px 12px; }
+            .submit-box { padding: 18px 20px; }
+            .content-card { padding: 20px; }
+            .page-title-bar h1 { font-size: 1.4rem; }
+            .page-title-bar { padding: 22px 20px; }
+
+            .footer-contact-row { gap: 10px 20px; padding: 12px 0; }
+            .footer-contact-item { font-size: 12.5px; }
+            .footer-socials { padding: 15px 0; gap: 8px; }
+            .footer-socials a { width: 38px; height: 38px; font-size: 15px; }
+        }
+        @media (max-width: 480px) {
+            .top-bar .contact-info { display: none; }
+            .top-bar .social-icons { display: none; }
+            .top-bar .container { justify-content: center; }
+            .top-bar .right { margin: 0 auto; }
+            .main-header .brand-text .sub { display: none; }
+            .featured-card .featured-image { min-height: 140px; font-size: 38px; }
+            .featured-card h2 { font-size: 1.05rem; }
+            .featured-card .featured-body { padding: 15px; }
+            .mobile-clock-bar { font-size: 10px; gap: 7px; padding: 6px 10px; }
+            .footer-contact-row { flex-direction: column; gap: 8px; }
+            .footer-contact-item { font-size: 12px; }
+            .footer-socials a { width: 36px; height: 36px; font-size: 14px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="top-bar">
+        <div class="container">
+            <div class="contact-info">
+                <i class="fa-regular fa-envelope"></i>
+                <span>alaqeelafoundation@gmail.com</span>
+            </div>
+            <div class="right">
+                <div class="social-icons">
+                    <a href="#" title="فيسبوك"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" title="تويتر"><i class="fab fa-twitter"></i></a>
+                    <a href="#" title="يوتيوب"><i class="fab fa-youtube"></i></a>
+                </div>
+                <button class="lang-btn active" data-lang="ar">العربية</button>
+                <button class="lang-btn" data-lang="en">English</button>
+                <button class="lang-btn" data-lang="fa">فارسی</button>
+            </div>
+        </div>
+    </div>
+
+    <header class="main-header">
+        <div class="container">
+            <a class="brand" onclick="showView('home')">
+                <div class="logo-mark"><i class="fa-solid fa-lightbulb"></i></div>
+                <div class="brand-text">
+                    <span class="main">مِشْكَاة</span>
+                    <span class="sub">للنور والوعي</span>
+                </div>
+            </a>
+            <div class="header-clock">
+                <div class="time-row">
+                    <i class="fa-regular fa-clock"></i>
+                    <span id="liveClock">--:--:--</span>
+                    <span id="clockPeriod">ص</span>
+                </div>
+                <div class="date-row">
+                    <span><i class="fa-regular fa-calendar"></i> <span id="dayName">—</span></span>
+                    <span>|</span>
+                    <span id="gregorianDate">—</span>
+                    <span>|</span>
+                    <span><i class="fa-solid fa-moon"></i> <span id="hijriDate">—</span></span>
+                </div>
+            </div>
+            <div class="menu-area">
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <nav class="main-nav" id="mainNav">
+        <div class="container">
+            <ul class="nav-list">
+                <li><a data-view="home" class="active">الرئيسية</a></li>
+                <li><a data-view="about">عن المنصة</a></li>
+                <li><a data-view="sections">الأقسام</a></li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-bs-toggle="dropdown">التصنيفات <i class="fa-solid fa-chevron-down" style="font-size:10px;"></i></a>
+                    <ul class="dropdown-menu" id="catsDropdownMenu">
+                        <li><a class="dropdown-item" data-cat="مقالات ورؤى">مقالات ورؤى</a></li>
+                        <li><a class="dropdown-item" data-cat="أهل البيت">أهل البيت (ع)</a></li>
+                        <li><a class="dropdown-item" data-cat="وعي مجتمعي">وعي مجتمعي</a></li>
+                        <li><a class="dropdown-item" data-cat="رؤى وحلول">رؤى وحلول</a></li>
+                        <li><a class="dropdown-item" data-cat="قضايا معاصرة">قضايا معاصرة</a></li>
+                        <li><a class="dropdown-item" data-cat="حوارات ومقابلات">حوارات ومقابلات</a></li>
+                        <li><a class="dropdown-item" data-cat="شبهات وردود">شبهات وردود</a></li>
+                        <li><a class="dropdown-item" data-cat="التوجيهات الأخلاقية">التوجيهات الأخلاقية</a></li>
+                    </ul>
+                </li>
+                <li><a data-view="participation">كيفية المشاركة</a></li>
+                <li><a data-view="invitation">دعوة للمشاركة</a></li>
+                <li><a data-view="contact">تواصل معنا</a></li>
+            </ul>
+            <div class="search-mini">
+                <input type="search" id="headerSearchInput" placeholder="ابحث...">
+                <button type="button"><i class="fa-solid fa-search"></i></button>
+            </div>
+        </div>
+    </nav>
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+
+    <div class="mobile-clock-bar">
+        <span><i class="fa-regular fa-clock"></i> <strong id="mobileClock">--:--</strong> <span id="mobilePeriod">ص</span></span>
+        <span class="sep">|</span>
+        <span><i class="fa-regular fa-calendar"></i> <span id="mobileDate">—</span></span>
+        <span class="sep">|</span>
+        <span><i class="fa-solid fa-moon"></i> <span id="mobileHijri">—</span></span>
+    </div>
+    <div class="mobile-search-bar">
+        <input type="search" id="mobileSearchInput" placeholder="ابحث في الموقع...">
+        <button type="button"><i class="fa-solid fa-search"></i> بحث</button>
+    </div>
+
+    <div class="main-container">
+
+        <div class="page-view active" id="view-home">
+            <div class="hero-compact">
+                <div class="hero-icon"><i class="fa-solid fa-lightbulb"></i></div>
+                <div class="hero-text">
+                    <h1>مِشْكَاةُ <span class="gold-text">النُّورِ</span></h1>
+                    <p>منصة فكرية توعوية لنشر المقالات والرؤى في بناء وعي مجتمعي متصل بكتاب الله وعترة رسوله</p>
+                </div>
+            </div>
+
+            <div class="breaking-bar">
+                <div class="container">
+                    <div class="breaking-label"><i class="fa-solid fa-circle"></i> آخر الأخبار</div>
+                    <div class="breaking-ticker">
+                        <marquee behavior="scroll" direction="right" scrollamount="3">
+                            <a>صدور مقال جديد: مقام العدالة عند الإمام علي (ع)</a>
+                            <span>●</span>
+                            <a>حوار خاص: دور الشباب في نهضة المجتمع</a>
+                            <span>●</span>
+                            <a>قراءة في كتاب الأخلاق في القرآن</a>
+                            <span>●</span>
+                            <a>ندوة علمية حول الذكاء الاصطناعي من منظور إسلامي</a>
+                        </marquee>
+                    </div>
+                </div>
+            </div>
+
+            <div class="news-grid" id="articles">
+                <div class="content-area">
+                    <div class="section-header" id="sectionHeader">
+                        <h2>المقالات والرؤى</h2>
+                    </div>
+                    <div class="category-tabs" id="mishkatCategories">
+                        <button class="cat-btn active" data-cat="all">الكل</button>
+                        <button class="cat-btn" data-cat="مقالات ورؤى">مقالات ورؤى</button>
+                        <button class="cat-btn" data-cat="أهل البيت">أهل البيت (ع)</button>
+                        <button class="cat-btn" data-cat="وعي مجتمعي">وعي مجتمعي</button>
+                        <button class="cat-btn" data-cat="رؤى وحلول">رؤى وحلول</button>
+                        <button class="cat-btn" data-cat="قضايا معاصرة">قضايا معاصرة</button>
+                        <button class="cat-btn" data-cat="حوارات ومقابلات">حوارات ومقابلات</button>
+                        <button class="cat-btn" data-cat="شبهات وردود">شبهات وردود</button>
+                        <button class="cat-btn" data-cat="التوجيهات الأخلاقية">التوجيهات الأخلاقية</button>
+                    </div>
+                    <div class="articles-grid" id="articlesGrid"></div>
+                    <div id="articlesEmpty" class="text-center py-5" style="display:none;">
+                        <i class="fa-regular fa-newspaper" style="font-size:45px; color:var(--secondary-blue);"></i>
+                        <p style="margin-top:15px; color:var(--text-muted);">لا توجد مقالات في هذا التصنيف حالياً</p>
+                    </div>
+                </div>
+
+                <aside class="sidebar">
+                    <div class="sidebar-box">
+                        <div class="box-header"><i class="fa-solid fa-fire"></i> الأكثر قراءة</div>
+                        <div class="box-body">
+                            <div class="most-read-item"><div class="number">1</div><div class="text"><p>مقام العدالة عند الإمام علي (ع)</p><small>أهل البيت (ع)</small></div></div>
+                            <div class="most-read-item"><div class="number">2</div><div class="text"><p>أثر التربية الأخلاقية في تماسك الأسرة</p><small>وعي مجتمعي</small></div></div>
+                            <div class="most-read-item"><div class="number">3</div><div class="text"><p>مشكلة البطالة المقنعة .. رؤية اقتصادية</p><small>رؤى وحلول</small></div></div>
+                            <div class="most-read-item"><div class="number">4</div><div class="text"><p>السيدة زينب (ع) نموذج الصبر والحكمة</p><small>أهل البيت (ع)</small></div></div>
+                            <div class="most-read-item"><div class="number">5</div><div class="text"><p>الذكاء الاصطناعي - قراءة إسلامية</p><small>قضايا معاصرة</small></div></div>
+                        </div>
+                    </div>
+                    <div class="sidebar-box">
+                        <div class="box-header"><i class="fa-solid fa-tags"></i> التصنيفات</div>
+                        <div class="box-body">
+                            <div class="sidebar-cat-item" data-cat="مقالات ورؤى"><span>مقالات ورؤى</span><span class="count">1</span></div>
+                            <div class="sidebar-cat-item" data-cat="أهل البيت"><span>أهل البيت (ع)</span><span class="count">2</span></div>
+                            <div class="sidebar-cat-item" data-cat="وعي مجتمعي"><span>وعي مجتمعي</span><span class="count">1</span></div>
+                            <div class="sidebar-cat-item" data-cat="رؤى وحلول"><span>رؤى وحلول</span><span class="count">1</span></div>
+                            <div class="sidebar-cat-item" data-cat="قضايا معاصرة"><span>قضايا معاصرة</span><span class="count">1</span></div>
+                            <div class="sidebar-cat-item" data-cat="حوارات ومقابلات"><span>حوارات ومقابلات</span><span class="count">1</span></div>
+                            <div class="sidebar-cat-item" data-cat="شبهات وردود"><span>شبهات وردود</span><span class="count">1</span></div>
+                            <div class="sidebar-cat-item" data-cat="التوجيهات الأخلاقية"><span>التوجيهات الأخلاقية</span><span class="count">1</span></div>
+                        </div>
+                    </div>
+                    <div class="sidebar-box">
+                        <div class="box-header"><i class="fa-solid fa-share-nodes"></i> تابعنا</div>
+                        <div class="box-body">
+                            <div class="follow-icons">
+                                <a href="#" class="fb"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#" class="tw"><i class="fab fa-twitter"></i></a>
+                                <a href="#" class="yt"><i class="fab fa-youtube"></i></a>
+                                <a href="#" class="tg"><i class="fab fa-telegram"></i></a>
+                                <a href="#" class="wa"><i class="fab fa-whatsapp"></i></a>
+                                <a href="#" class="ig"><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+
+        <div class="page-view" id="view-about">
+            <div class="page-title-bar">
+                <h1><i class="fa-solid fa-circle-info"></i> عن المنصة</h1>
+                <p>تعرّف على منصة مشكاة ورؤيتها ورسالتها</p>
+            </div>
+
+            <div class="content-card">
+                <h2><i class="fa-solid fa-lightbulb"></i> التعريف</h2>
+                <p>مشكاة منصة إلكترونية ثقافية توعوية، تُعنى بنشر الأفكار والرؤى والمقالات الهادفة التي تساهم في توعية المجتمع، وتقديم حلول عملية للمشكلات المعاصرة، وإحياء ذكر أهل البيت عليهم السلام وسيرتهم، وترسيخ القيم الأخلاقية والإنسانية.</p>
+            </div>
+
+            <div class="content-card">
+                <h2><i class="fa-solid fa-eye"></i> الرؤية</h2>
+                <p>أن تكون <strong>مشكاة</strong> منارة رقمية موثوقة، يلجأ إليها الباحث عن المعرفة الصافية، والفكر النير، والرؤية المتوازنة، بعيداً عن الضجيج والتشويش.</p>
+            </div>
+
+            <div class="content-card">
+                <h2><i class="fa-solid fa-bullhorn"></i> الرسالة</h2>
+                <p>تقديم محتوى فكري وثقافي رصين، يُنتقى بعناية، ويُنشر بعد مراجعة دقيقة، ليصل إلى القارئ نقياً خالياً من الشوائب، ويُساهم في بناء وعي مجتمعي متصل بكتاب الله وعترة رسوله ﷺ.</p>
+            </div>
+
+            <div class="content-card">
+                <h2><i class="fa-solid fa-star"></i> ما يميز مشكاة</h2>
+                <ul>
+                    <li><strong>محتوى منتقى:</strong> لا مكان للفوضى أو المحتوى التجاري.</li>
+                    <li><strong>هوية بصرية أنيقة:</strong> تعكس الطابع الروحي (الأزرق الكحلي والذهبي).</li>
+                    <li><strong>إدارة سهلة:</strong> لوحة تحكم خاصة للمشرفين لنشر المقالات.</li>
+                    <li><strong>دعم متعدد اللغات:</strong> العربية، الإنجليزية، الفارسية.</li>
+                    <li><strong>مجانية بالكامل:</strong> لا رسوم على النشر أو القراءة.</li>
+                </ul>
+            </div>
+
+            <div class="content-card">
+                <h2><i class="fa-solid fa-bullseye"></i> الأهداف</h2>
+                <ul>
+                    <li>إثراء المحتوى العربي الرصين على الإنترنت.</li>
+                    <li>توعية المجتمع بالقضايا المعاصرة.</li>
+                    <li>إحياء تراث أهل البيت عليهم السلام.</li>
+                    <li>فتح المجال أمام الكتّاب الجدد للنشر.</li>
+                    <li>بناء جيل واعٍ مرتبط بكتاب الله وعترة رسوله.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="page-view" id="view-sections">
+            <div class="page-title-bar">
+                <h1><i class="fa-solid fa-list"></i> الأقسام</h1>
+                <p>تصفح الأقسام الثمانية لمنصة مشكاة</p>
+            </div>
+
+            <div class="content-card">
+                <h2><i class="fa-solid fa-tags"></i> أقسام المحتوى</h2>
+                <p>تضم منصة مشكاة ثمانية أقسام رئيسية تغطي مختلف المجالات الفكرية والثقافية والاجتماعية:</p>
+                <div class="sections-grid">
+                    <div class="section-tile" data-cat="مقالات ورؤى">
+                        <div class="icon"><i class="fa-solid fa-pen-fancy"></i></div>
+                        <h4>مقالات ورؤى</h4>
+                        <p>مقالات فكرية عامة تعالج قضايا معاصرة برؤية متوازنة.</p>
+                    </div>
+                    <div class="section-tile" data-cat="أهل البيت">
+                        <div class="icon"><i class="fa-solid fa-mosque"></i></div>
+                        <h4>أهل البيت (ع)</h4>
+                        <p>مقالات متخصصة في سيرة وسلوك أهل البيت ودروس من مدرستهم.</p>
+                    </div>
+                    <div class="section-tile" data-cat="وعي مجتمعي">
+                        <div class="icon"><i class="fa-solid fa-users"></i></div>
+                        <h4>وعي مجتمعي</h4>
+                        <p>قضايا اجتماعية معاصرة: الأسرة، التربية، الشباب.</p>
+                    </div>
+                    <div class="section-tile" data-cat="رؤى وحلول">
+                        <div class="icon"><i class="fa-solid fa-lightbulb"></i></div>
+                        <h4>رؤى وحلول</h4>
+                        <p>قراءة تحليلية للمشكلات الواقعية مع حلول عملية.</p>
+                    </div>
+                    <div class="section-tile" data-cat="قضايا معاصرة">
+                        <div class="icon"><i class="fa-solid fa-globe"></i></div>
+                        <h4>قضايا معاصرة</h4>
+                        <p>قراءة إسلامية للأحداث الجارية والظواهر الحديثة.</p>
+                    </div>
+                    <div class="section-tile" data-cat="حوارات ومقابلات">
+                        <div class="icon"><i class="fa-solid fa-comments"></i></div>
+                        <h4>حوارات ومقابلات</h4>
+                        <p>حوارات مع شخصيات فكرية وثقافية وأكاديمية.</p>
+                    </div>
+                    <div class="section-tile" data-cat="شبهات وردود">
+                        <div class="icon"><i class="fa-solid fa-shield-halved"></i></div>
+                        <h4>شبهات وردود</h4>
+                        <p>الرد العلمي على الشبهات الفكرية والعقائدية.</p>
+                    </div>
+                    <div class="section-tile" data-cat="التوجيهات الأخلاقية">
+                        <div class="icon"><i class="fa-solid fa-heart"></i></div>
+                        <h4>التوجيهات الأخلاقية</h4>
+                        <p>دروس تربوية وأخلاقية مأثورة عن أهل البيت.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="page-view" id="view-policy">
+            <div class="page-title-bar">
+                <h1><i class="fa-solid fa-circle-check"></i> سياسة النشر</h1>
+                <p>شروط وقواعد نشر المقالات في منصة مشكاة</p>
+            </div>
+
+            <div class="content-card">
+                <h2><i class="fa-solid fa-scale-balanced"></i> شروط النشر</h2>
+                <ul>
+                    <li><strong>الانتقاء:</strong> لا يُنشر أي مقال إلا بعد مراجعته من فريق التحرير.</li>
+                    <li><strong>الأصالة:</strong> يُشترط أن يكون المقال جديداً ولم يُنشر سابقاً.</li>
+                    <li><strong>الموضوعية:</strong> الالتزام بالطرح العلمي الرصين بعيداً عن التعصب.</li>
+                    <li><strong>اللغة:</strong> سلامة اللغة العربية، وحسن العرض.</li>
+                    <li><strong>الحقوق:</strong> تُحفظ حقوق الكاتب، ويُذكر اسمه في كل مقال.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="page-view" id="view-participation">
+            <div class="page-title-bar">
+                <h1><i class="fa-solid fa-hands-helping"></i> كيفية المشاركة</h1>
+                <p>خطوات إرسال مقالك إلى منصة مشكاة</p>
+            </div>
+
+            <div class="content-card">
+                <h2><i class="fa-solid fa-list-ol"></i> خطوات المشاركة</h2>
+                <ol class="steps-list">
+                    <li>اكتب مقالك بصيغة Word أو Google Docs، بموضوع أصيل ولغة سليمة.</li>
+                    <li>أرسل المقال إلى البريد الإلكتروني: <strong>alaqeelafoundation@gmail.com</strong></li>
+                    <li>أو عبر النموذج الإلكتروني المخصص (سيتوفر قريباً).</li>
+                    <li>سيتم مراجعة المقال خلال أسبوع من استلامه.</li>
+                    <li>يُخطر الكاتب بالقبول، أو الرفض، أو طلب التعديل.</li>
+                    <li>عند النشر، يُذكر اسم الكاتب ويُروّج للمقال عبر قنوات المنصة.</li>
+                </ol>
+            </div>
+
+            <div class="content-card">
+                <h2><i class="fa-solid fa-envelope"></i> نموذج التواصل المبدئي</h2>
+                <div class="submit-box" style="margin-top:0;">
+                    <form onsubmit="event.preventDefault(); alert('تم استلام مقالك بنجاح! سيتم مراجعته وإبلاغك قريباً.'); this.reset();">
+                        <div class="row g-3">
+                            <div class="col-md-6"><label>الاسم الكامل</label><input type="text" required></div>
+                            <div class="col-md-6"><label>البريد الإلكتروني</label><input type="email" required></div>
+                            <div class="col-12"><label>عنوان المقال</label><input type="text" required></div>
+                            <div class="col-md-6">
+                                <label>التصنيف المقترح</label>
+                                <select required>
+                                    <option value="">اختر التصنيف</option>
+                                    <option>مقالات ورؤى</option>
+                                    <option>أهل البيت (ع)</option>
+                                    <option>وعي مجتمعي</option>
+                                    <option>رؤى وحلول</option>
+                                    <option>قضايا معاصرة</option>
+                                    <option>حوارات ومقابلات</option>
+                                    <option>شبهات وردود</option>
+                                    <option>التوجيهات الأخلاقية</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6"><label>رابط ملف المقال (اختياري)</label><input type="url" placeholder="Google Drive / Dropbox"></div>
+                            <div class="col-12"><label>المقتطف (نبذة قصيرة)</label><textarea rows="3" required></textarea></div>
+                            <div class="col-12 text-start">
+                                <button type="submit" class="btn-submit"><i class="fa-regular fa-paper-plane"></i> إرسال المقال</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="page-view" id="view-invitation">
+            <div class="page-title-bar">
+                <h1><i class="fa-solid fa-bullhorn"></i> دعوة للمشاركة</h1>
+                <p>طرق الإسهام في منصة مشكاة</p>
+            </div>
+
+            <div class="content-card">
+                <h2><i class="fa-solid fa-hand-holding-heart"></i> كيف تُساهم معنا؟</h2>
+                <p>نرحب بكل من يجد في نفسه القدرة على الإسهام في هذا المشروع المبارك، من خلال الطرق التالية:</p>
+                <div class="invite-grid">
+                    <div class="invite-tile">
+                        <i class="fa-solid fa-pen-nib"></i>
+                        <h4>الكتابة</h4>
+                        <p>مقالات، رؤى، تحليلات في مختلف المجالات.</p>
+                    </div>
+                    <div class="invite-tile">
+                        <i class="fa-solid fa-language"></i>
+                        <h4>الترجمة</h4>
+                        <p>ترجمة المقالات إلى لغات أخرى.</p>
+                    </div>
+                    <div class="invite-tile">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <h4>المراجعة</h4>
+                        <p>تدقيق لغوي أو علمي للمقالات.</p>
+                    </div>
+                    <div class="invite-tile">
+                        <i class="fa-solid fa-code"></i>
+                        <h4>الدعم التقني</h4>
+                        <p>تطوير المنصة وتحسين أدائها.</p>
+                    </div>
+                    <div class="invite-tile">
+                        <i class="fa-solid fa-share-nodes"></i>
+                        <h4>النشر</h4>
+                        <p>نشر المقالات عبر وسائل التواصل.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="page-view" id="view-contact">
+            <div class="page-title-bar">
+                <h1><i class="fa-solid fa-address-book"></i> تواصل معنا</h1>
+                <p>نحن هنا للإجابة على استفساراتكم</p>
+            </div>
+
+            <div class="content-card">
+                <h2><i class="fa-solid fa-headset"></i> معلومات التواصل</h2>
+                <div class="contact-grid">
+                    <div class="contact-tile">
+                        <i class="fa-regular fa-envelope"></i>
+                        <h4>البريد الإلكتروني</h4>
+                        <p>alaqeelafoundation@gmail.com</p>
+                    </div>
+                    <div class="contact-tile">
+                        <i class="fa-solid fa-phone"></i>
+                        <h4>الهاتف</h4>
+                        <p>+967 779 018 414</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-card">
+                <h2><i class="fa-regular fa-paper-plane"></i> أرسل رسالة</h2>
+                <div class="submit-box" style="margin-top:0;">
+                    <form onsubmit="event.preventDefault(); alert('تم استلام رسالتك بنجاح! شكراً لتواصلك.'); this.reset();">
+                        <div class="row g-3">
+                            <div class="col-md-6"><label>الاسم</label><input type="text" required></div>
+                            <div class="col-md-6"><label>البريد الإلكتروني</label><input type="email" required></div>
+                            <div class="col-12"><label>الموضوع</label><input type="text" required></div>
+                            <div class="col-12"><label>الرسالة</label><textarea rows="4" required></textarea></div>
+                            <div class="col-12 text-start">
+                                <button type="submit" class="btn-submit"><i class="fa-regular fa-paper-plane"></i> إرسال</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-brand">
+                <div class="logo-mark"><i class="fa-solid fa-lightbulb"></i></div>
+                <span>مِشْكَاة</span>
+            </div>
+
+            <div class="footer-contact-row">
+                <a href="mailto:alaqeelafoundation@gmail.com" class="footer-contact-item">
+                    <i class="fa-regular fa-envelope"></i>
+                    alaqeelafoundation@gmail.com
+                </a>
+                <a href="tel:+967779018414" class="footer-contact-item">
+                    <i class="fa-solid fa-phone"></i>
+                    +967 779 018 414
+                </a>
+            </div>
+
+            <div class="footer-socials">
+                <a href="#" class="fb" title="فيسبوك"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="tw" title="تويتر"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="yt" title="يوتيوب"><i class="fab fa-youtube"></i></a>
+                <a href="#" class="tg" title="تيليجرام"><i class="fab fa-telegram"></i></a>
+                <a href="#" class="wa" title="واتساب"><i class="fab fa-whatsapp"></i></a>
+                <a href="#" class="ig" title="إنستغرام"><i class="fab fa-instagram"></i></a>
+                <a href="/admin/" class="admin-link" title="لوحة الإدارة"><i class="fa-solid fa-gear"></i></a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container"><p>جميع الحقوق محفوظة © 2026 منصة مشكاة | للنور والوعي</p></div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        function updateDateTime() {
+            const now = new Date();
+            const days = ['الأحد', 'الإثنين', 'الثلاثاء', 'الأربعاء', 'الخميس', 'الجمعة', 'السبت'];
+            document.getElementById('dayName').textContent = days[now.getDay()];
+            try {
+                const hijriText = new Intl.DateTimeFormat('ar-SA-u-ca-islamic', { day: 'numeric', month: 'long', year: 'numeric' }).format(now);
+                const hijriShort = new Intl.DateTimeFormat('ar-SA-u-ca-islamic', { day: 'numeric', month: 'short' }).format(now);
+                document.getElementById('hijriDate').textContent = hijriText;
+                document.getElementById('mobileHijri').textContent = hijriShort;
+            } catch (e) {}
+            const day = String(now.getDate()).padStart(2, '0');
+            const month = String(now.getMonth() + 1).padStart(2, '0');
+            const year = now.getFullYear();
+            const dateStr = day + '/' + month + '/' + year;
+            document.getElementById('gregorianDate').textContent = dateStr;
+            document.getElementById('mobileDate').textContent = dateStr;
+            let h = now.getHours();
+            const period = h >= 12 ? 'م' : 'ص';
+            h = h % 12; h = h ? h : 12;
+            const m = String(now.getMinutes()).padStart(2, '0');
+            const s = String(now.getSeconds()).padStart(2, '0');
+            document.getElementById('liveClock').textContent = h + ':' + m + ':' + s;
+            document.getElementById('clockPeriod').textContent = period;
+            document.getElementById('mobileClock').textContent = h + ':' + m;
+            document.getElementById('mobilePeriod').textContent = period;
+        }
+        updateDateTime();
+        setInterval(updateDateTime, 1000);
+    </script>
+
+    <script>
+        const mishkatArticles = [
+            { title: 'مقام العدالة عند الإمام علي (ع)', category: 'أهل البيت', author: 'د. أحمد الفقيه', date: '2026-09-01', excerpt: 'نظرة في سيرته كحاكم عادل ومكافح للظلم، وكيف يمكن تطبيق مبادئه اليوم.' },
+            { title: 'أثر التربية الأخلاقية في تماسك الأسرة', category: 'وعي مجتمعي', author: 'أ. سعاد الموسوي', date: '2026-08-28', excerpt: 'كيف نعيد القيم النبوية والعلوية إلى بيوتنا؟' },
+            { title: 'مشكلة البطالة المقنعة .. رؤية اقتصادية', category: 'رؤى وحلول', author: 'د. علي الحسني', date: '2026-08-20', excerpt: 'قراءة في الحلول المستدامة من منظور إسلامي.' },
+            { title: 'السيدة زينب (ع) نموذج الصبر والحكمة', category: 'أهل البيت', author: 'الشيخ محمد الصادق', date: '2026-08-15', excerpt: 'دروس في الثبات والفصاحة من موقف الطف.' },
+            { title: 'شبهة حول عصمة الأنبياء - رد علمي', category: 'شبهات وردود', author: 'السيد مهدي الحسيني', date: '2026-08-10', excerpt: 'رد مفصل على الشبهات المثارة حول عصمة الأنبياء.' },
+            { title: 'حوار مع الأستاذ حول الثقافة', category: 'حوارات ومقابلات', author: 'فريق التحرير', date: '2026-08-05', excerpt: 'حوار حول واقع الثقافة وسبل النهوض بها.' },
+            { title: 'التواضع في سيرة أهل البيت (ع)', category: 'التوجيهات الأخلاقية', author: 'الشيخ محمد الصادق', date: '2026-08-01', excerpt: 'دروس عملية في التواضع من سيرة العترة الطاهرة.' },
+            { title: 'الذكاء الاصطناعي - قراءة إسلامية', category: 'قضايا معاصرة', author: 'د. أحمد الفقيه', date: '2026-07-28', excerpt: 'كيف نتعامل مع تقنيات الذكاء الاصطناعي من منظور إسلامي؟' },
+            { title: 'دور الشباب في نهضة المجتمع', category: 'مقالات ورؤى', author: 'أ. سعاد الموسوي', date: '2026-07-20', excerpt: 'قراءة في طاقات الشباب وكيفية استثمارها في بناء المجتمع.' }
+        ];
+
+        function renderArticles(filterCat, searchQuery) {
+            const grid = document.getElementById('articlesGrid');
+            const empty = document.getElementById('articlesEmpty');
+            const isFiltered = (filterCat && filterCat !== 'all') || searchQuery;
+
+            if (isFiltered) {
+                document.body.classList.add('extras-hidden');
+            } else {
+                document.body.classList.remove('extras-hidden');
+            }
+
+            let filtered = mishkatArticles;
+            if (filterCat && filterCat !== 'all') filtered = filtered.filter(a => a.category === filterCat);
+            if (searchQuery) {
+                const q = searchQuery.toLowerCase();
+                filtered = filtered.filter(a =>
+                    a.title.toLowerCase().includes(q) || a.excerpt.toLowerCase().includes(q) || a.author.toLowerCase().includes(q)
+                );
+            }
+            if (filtered.length === 0) {
+                grid.innerHTML = '';
+                empty.style.display = 'block';
+                return;
+            }
+            empty.style.display = 'none';
+
+            let html = '';
+            if (!isFiltered && filtered.length > 0) {
+                const first = filtered[0];
+                html += '<div class="featured-card">' +
+                    '<div class="featured-image"><i class="fa-solid fa-lightbulb"></i></div>' +
+                    '<div class="featured-body">' +
+                        '<span class="category-badge">' + first.category + '</span>' +
+                        '<h2>' + first.title + '</h2>' +
+                        '<p class="excerpt">' + first.excerpt + '</p>' +
+                        '<div class="meta">' +
+                            '<span><i class="fa-regular fa-user"></i> ' + first.author + '</span>' +
+                            '<span><i class="fa-regular fa-calendar"></i> ' + first.date + '</span>' +
+                        '</div>' +
+                    '</div>' +
+                '</div>';
+                filtered = filtered.slice(1);
+            }
+
+            html += filtered.map(a => 
+                '<div class="article-card">' +
+                    '<div class="card-top"></div>' +
+                    '<div class="card-body">' +
+                        '<span class="category-badge">' + a.category + '</span>' +
+                        '<h3>' + a.title + '</h3>' +
+                        '<p class="excerpt">' + a.excerpt + '</p>' +
+                        '<div class="meta">' +
+                            '<span><i class="fa-regular fa-user"></i> ' + a.author + '</span>' +
+                            '<span><i class="fa-regular fa-calendar"></i> ' + a.date + '</span>' +
+                        '</div>' +
+                    '</div>' +
+                '</div>'
+            ).join('');
+
+            grid.innerHTML = html;
+        }
+
+        function showView(viewId) {
+            document.body.classList.remove('extras-hidden');
+
+            document.querySelectorAll('.page-view').forEach(v => v.classList.remove('active'));
+            const target = document.getElementById('view-' + viewId);
+            if (target) target.classList.add('active');
+
+            document.querySelectorAll('.main-nav .nav-list li a[data-view]').forEach(a => {
+                a.classList.remove('active');
+                if (a.dataset.view === viewId) a.classList.add('active');
+            });
+
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+
+            if (viewId === 'home') {
+                const activeCat = document.querySelector('#mishkatCategories .cat-btn.active');
+                renderArticles(activeCat ? activeCat.dataset.cat : 'all', '');
+            }
+        }
+
+        const translations = {
+            ar: { title: 'منصة مشكاة | للنور والوعي' },
+            en: { title: 'Mishkat Platform' },
+            fa: { title: 'پلتفرم مشکاه' }
+        };
+        function setLanguage(lang) {
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.remove('active');
+                if (btn.dataset.lang === lang) btn.classList.add('active');
+            });
+            const html = document.documentElement;
+            if (lang === 'ar' || lang === 'fa') {
+                html.dir = 'rtl';
+                document.body.style.direction = 'rtl';
+            } else {
+                html.dir = 'ltr';
+                document.body.style.direction = 'ltr';
+            }
+            document.title = (translations[lang] || translations.ar).title;
+            localStorage.setItem('mishkat_lang', lang);
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.addEventListener('click', function() { setLanguage(this.dataset.lang); });
+            });
+            setLanguage(localStorage.getItem('mishkat_lang') || 'ar');
+
+            document.querySelectorAll('.main-nav .nav-list li a[data-view]').forEach(a => {
+                a.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    showView(this.dataset.view);
+                    if (window.innerWidth <= 768) {
+                        document.getElementById('mainNav').classList.remove('mobile-open');
+                        document.getElementById('mobileOverlay').classList.remove('show');
+                    }
+                });
+            });
+
+            document.querySelectorAll('.section-tile').forEach(tile => {
+                tile.addEventListener('click', function() {
+                    const cat = this.dataset.cat;
+                    showView('home');
+                    setTimeout(() => {
+                        document.querySelectorAll('#mishkatCategories .cat-btn').forEach(b => {
+                            b.classList.toggle('active', b.dataset.cat === cat);
+                        });
+                        renderArticles(cat, '');
+                        document.getElementById('articles').scrollIntoView({behavior: 'smooth'});
+                    }, 100);
+                });
+            });
+
+            document.querySelectorAll('#catsDropdownMenu .dropdown-item').forEach(item => {
+                item.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const cat = this.dataset.cat;
+                    showView('home');
+                    setTimeout(() => {
+                        document.querySelectorAll('#mishkatCategories .cat-btn').forEach(b => {
+                            b.classList.toggle('active', b.dataset.cat === cat);
+                        });
+                        renderArticles(cat, '');
+                        document.getElementById('articles').scrollIntoView({behavior: 'smooth'});
+                    }, 100);
+                    if (window.innerWidth <= 768) {
+                        document.getElementById('mainNav').classList.remove('mobile-open');
+                        document.getElementById('mobileOverlay').classList.remove('show');
+                    }
+                });
+            });
+
+            document.querySelectorAll('#mishkatCategories .cat-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    document.querySelectorAll('#mishkatCategories .cat-btn').forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                    const searchVal = (document.getElementById('headerSearchInput') || {}).value || '';
+                    renderArticles(this.dataset.cat, searchVal);
+                });
+            });
+
+            document.querySelectorAll('.sidebar-cat-item').forEach(item => {
+                item.addEventListener('click', function() {
+                    const cat = this.dataset.cat;
+                    document.querySelectorAll('#mishkatCategories .cat-btn').forEach(b => {
+                        b.classList.toggle('active', b.dataset.cat === cat);
+                    });
+                    renderArticles(cat, '');
+                    document.getElementById('articles').scrollIntoView({behavior: 'smooth'});
+                });
+            });
+
+            const desktopSearch = document.getElementById('headerSearchInput');
+            const mobileSearch = document.getElementById('mobileSearchInput');
+            function doSearch(value) {
+                showView('home');
+                const activeCat = document.querySelector('#mishkatCategories .cat-btn.active');
+                renderArticles(activeCat ? activeCat.dataset.cat : 'all', value);
+            }
+            if (desktopSearch) {
+                desktopSearch.addEventListener('input', function() {
+                    if (mobileSearch) mobileSearch.value = this.value;
+                    doSearch(this.value);
+                });
+            }
+            if (mobileSearch) {
+                mobileSearch.addEventListener('input', function() {
+                    if (desktopSearch) desktopSearch.value = this.value;
+                    doSearch(this.value);
+                });
+            }
+
+            renderArticles('all', '');
+
+            const mobileBtn = document.getElementById('mobileMenuBtn');
+            const mainNav = document.getElementById('mainNav');
+            const overlay = document.getElementById('mobileOverlay');
+
+            if (mobileBtn) {
+                mobileBtn.addEventListener('click', function() {
+                    mainNav.classList.add('mobile-open');
+                    overlay.classList.add('show');
+                    if (!mainNav.querySelector('.mobile-close-btn')) {
+                        const closeBtn = document.createElement('button');
+                        closeBtn.className = 'mobile-close-btn';
+                        closeBtn.innerHTML = '<i class="fa-solid fa-times"></i>';
+                        closeBtn.addEventListener('click', function() {
+                            mainNav.classList.remove('mobile-open');
+                            overlay.classList.remove('show');
+                        });
+                        mainNav.appendChild(closeBtn);
+                    }
+                });
+            }
+            if (overlay) {
+                overlay.addEventListener('click', function() {
+                    mainNav.classList.remove('mobile-open');
+                    overlay.classList.remove('show');
+                });
+            }
+        });
+    </script>
+
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <script>
+        if (window.location.search.includes('invite_token=') || window.location.hash.includes('invite_token=')) {
+            window.location.href = '/admin/';
+        }
+        if (window.netlifyIdentity) { window.netlifyIdentity.init(); }
+    </script>
+
+</body>
+</html>
