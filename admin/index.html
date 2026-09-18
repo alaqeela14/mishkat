@@ -8,7 +8,20 @@
 </head>
 <body>
   <script>
-    if (window.netlifyIdentity) window.netlifyIdentity.init();
+    // معالجة الدعوة عند التحميل
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", user => {
+        if (!user) {
+          window.netlifyIdentity.on("login", () => {
+            document.location.href = "/admin/";
+          });
+        }
+      });
+      // هذا السطر المهم: يفتح نافذة الدعوة تلقائياً
+      window.netlifyIdentity.init();
+    }
+    
+    // تحميل Decap CMS
     (function() {
       let script = document.createElement('script');
       script.src = 'https://unpkg.com/decap-cms@latest/dist/decap-cms.js';
